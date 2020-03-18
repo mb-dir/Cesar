@@ -6,19 +6,19 @@ window.addEventListener('DOMContentLoaded', ()=>{
 function cesar(input, rot){
     if (Number.isInteger(rot)){
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+        let encryptedWord = '';
 
-        for (const letter of input) {
-            
+        for (const letter of input) {            
             if (alphabet[alphabet.indexOf(letter) + rot] === undefined){
-                console.log(alphabet[alphabet.indexOf(letter) - rot ])
+                encryptedWord += alphabet[alphabet.indexOf(letter) - rot];
             }else{
-                console.log(alphabet[alphabet.indexOf(letter) + rot])
+                encryptedWord += alphabet[alphabet.indexOf(letter) + rot];
             }
-
         }
+        console.log(encryptedWord)
     }else{
         throw new Error('Rot must be a number');
     }
 }
 
-cesar('abcdefghijklmnopqrstuvxyz', 13);
+cesar('abcz', 13);
