@@ -8,11 +8,17 @@ function cesar(input, rot){
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
         for (const letter of input) {
-            console.log(alphabet[alphabet.indexOf(letter) + rot])
+            
+            if (alphabet[alphabet.indexOf(letter) + rot] === undefined){
+                console.log(alphabet[alphabet.indexOf(letter) - rot ])
+            }else{
+                console.log(alphabet[alphabet.indexOf(letter) + rot])
+            }
+
         }
     }else{
         throw new Error('Rot must be a number');
     }
 }
 
-cesar('abc', 1);
+cesar('abcdefghijklmnopqrstuvxyz', 13);
