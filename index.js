@@ -10,9 +10,10 @@ function cesar(input, rot){
 
         let encryptedWord = '';
 
-        for (const letter of input) {            
-            if (alphabet[alphabet.indexOf(letter) + rot] === undefined){
-                const howMuchToEndAlphabet = alphabetLen - alphabet.indexOf(letter) - 1
+        for (const letter of input) { 
+            const letterIndex = alphabet.indexOf(letter)           
+            if (alphabet[letterIndex + rot] === undefined){
+                const howMuchToEndAlphabet = alphabetLen - letterIndex - 1
                 encryptedWord += alphabet[rot - howMuchToEndAlphabet - 1];
 
                 //EXAMPLE
@@ -23,7 +24,7 @@ function cesar(input, rot){
                 //encryptedWord += alphabet[2-0-1] => alphabet[1] = b
                 //-1 because index of arrays starts at 0, not 1 ;)
             }else{
-                encryptedWord += alphabet[alphabet.indexOf(letter) + rot];
+                encryptedWord += alphabet[letterIndex + rot];
             }
         }
         console.log(encryptedWord)
