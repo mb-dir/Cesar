@@ -34,3 +34,11 @@ function cesar(input, rot){
 }
 
 cesar('cemrcebtenzbjnav', 13);
+
+function isUpper(letter) {
+    if (letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90){
+        return true;
+    }else{
+        return false;
+    }
+}
