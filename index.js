@@ -43,3 +43,21 @@ function isUpper(letter) {
         return false;
     }
 }
+
+function encripting(alphabet, len, letter, rot=13) {
+    const letterIndex = alphabet.indexOf(letter)
+    if (alphabet[letterIndex + rot] === undefined) {
+        const howMuchToEndAlphabet = len - letterIndex - 1
+        return alphabet[rot - howMuchToEndAlphabet - 1];
+
+        //EXAMPLE
+        //for 'z', alphabetLower and rot 2
+        //len = 26
+        //indexOf('z') = 25
+        //howMuchToEndAlphabet = 0 (26-25-1)
+        //return alphabet[2-0-1] => alphabet[1] = b
+        //-1 because index of arrays starts at 0, not 1 ;)
+    } else {
+        return alphabet[letterIndex + rot];
+    }
+}
