@@ -6,12 +6,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
 function cesar(input, rot){
     if (Number.isInteger(rot)){
         const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-        const lower = input.toLowerCase();
         const alphabetLen = alphabet.length;
 
         let encryptedWord = '';
 
-        for (const letter of lower) { 
+        for (const letter of input) { 
             const letterIndex = alphabet.indexOf(letter)           
             if (alphabet[letterIndex + rot] === undefined){
                 const howMuchToEndAlphabet = alphabetLen - letterIndex - 1
@@ -34,4 +33,4 @@ function cesar(input, rot){
     }
 }
 
-cesar('Cemrcebtenzbjnav', 13);
+cesar('cemrcebtenzbjnav', 13);
