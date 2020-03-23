@@ -14,23 +14,28 @@ window.addEventListener('DOMContentLoaded', ()=>{
 });
 
 function cesar(input, rot){
-    if (Number.isInteger(rot)){
-        const alphabetLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-        const alphabetUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-        const alphabetLen = 26;//const length of alphabet is 26
+    if(validChars(input)){
+        if (Number.isInteger(rot)) {
+            const alphabetLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+            const alphabetUpper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+            const alphabetLen = 26;//const length of alphabet is 26
 
-        let encryptedWord = '';
+            let encryptedWord = '';
 
-        for (const letter of input) { 
-            if(isUpper(letter)){
-                encryptedWord += encripting(alphabetUpper, alphabetLen, letter, rot)
-            }else{
-                encryptedWord += encripting(alphabetLower, alphabetLen, letter, rot)
+            for (const letter of input) {
+                if (isUpper(letter)) {
+                    encryptedWord += encripting(alphabetUpper, alphabetLen, letter, rot)
+                } else {
+                    encryptedWord += encripting(alphabetLower, alphabetLen, letter, rot)
+                }
             }
+            return encryptedWord;
+        } else {
+            throw new Error('Rot must be a number');
         }
-        return encryptedWord;
     }else{
-        throw new Error('Rot must be a number');
+        alert('Błędny input, sprawdź, czy podany wyraz nie posiada w sobie przecinków, wykrzykników, liczb, znaków spacji itp!');
+        throw new Error('Invalid input');
     }
 }
 
