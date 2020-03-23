@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     const formData = document.querySelector('#inputData');
     const cesarData = document.querySelector('#cesar')
+
+    formData.addEventListener('submit', (e)=>{
+        e.preventDefault();
+    });
 });
 
 function cesar(input, rot){
@@ -23,8 +27,6 @@ function cesar(input, rot){
         throw new Error('Rot must be a number');
     }
 }
-
-cesar('AbCdEfGhIjKlMnOpqRsTuWxYz', 1);
 
 function isUpper(letter) {
     if (letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90){
