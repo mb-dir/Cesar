@@ -28,7 +28,7 @@ function cesar(input, rot){
                 encryptedWord += encripting(alphabetLower, alphabetLen, letter, rot)
             }
         }
-        console.log(encryptedWord)
+        return encryptedWord;
     }else{
         throw new Error('Rot must be a number');
     }
