@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     formData.addEventListener('submit', (e)=>{
         e.preventDefault();
+        cesar(cesarData, rot)
     });
 });
 
