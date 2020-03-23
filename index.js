@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     const formData = document.querySelector('#inputData');
-    const cesarData = document.querySelector('#cesar')
+    const rot = document.querySelector('#rot');
+    const cesarData = document.querySelector('#cesar').value;
 
     formData.addEventListener('submit', (e)=>{
         e.preventDefault();
