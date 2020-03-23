@@ -8,8 +8,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         const rot = parseInt(document.querySelector('#rot').value);
         const cesarData = document.querySelector('#cesar').value;
 
-        afterEncrypted = '';
-        afterEncrypted = cesar(cesarData, rot);
+        afterEncrypted.innerHTML = '';
+        afterEncrypted.innerHTML = cesar(cesarData, rot);
     });
 });
 
