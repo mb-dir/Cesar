@@ -59,3 +59,9 @@ function encripting(alphabet, len, letter, rot=13) {
         return alphabet[letterIndex + rot];
     }
 }
+
+function validChars(input){
+    const reg = /[^a-zA-Z]/;
+
+    return !reg.test(input)
+}
