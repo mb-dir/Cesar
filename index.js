@@ -7,8 +7,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
         e.preventDefault(); 
         const rot = parseInt(document.querySelector('#rot').value);
         const cesarData = document.querySelector('#cesar').value;
+        const cesar = new Cesar(cesarData, rot)
 
         afterEncrypted.innerHTML = '';
-        afterEncrypted.innerHTML = cesar(cesarData, rot);
+        afterEncrypted.innerHTML = cesar.getCesar();
     });
 });
