@@ -9,8 +9,16 @@
 <body>
     <div class="wrapper">
         <form action="" class="form" id="inputData">
-            <label for="cesar">Podaj frazę do zaszyfrowania</label>
-            <input type="text" id="cesar" required>
+            <div class="inputWrap">
+                <label for="cesar">Podaj frazę do zaszyfrowania</label>
+                <input type="text" id="cesar" required>
+            </div>
+
+            <div class="inputWrap">
+                <label for="rot">Podaj ROT(o ile liter ma przesuwać)</label>
+                <input type="number" id="rot" required min="1" max="26">
+            </div>
+
             <button>Szyfruj!</button>
         </form>
         <p>Fraza po zaszyfrowaniu: <span id="afterCesar"></span></p>

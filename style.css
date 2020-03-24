@@ -24,8 +24,11 @@ body{
     justify-content: center;
     align-content: start;
 }
+.inputWrap{
+    flex-basis: 100%;
+    margin: 10px 0 5px;
+}
 label{
     display: block;
-    margin-bottom: 5px;
 }
 
