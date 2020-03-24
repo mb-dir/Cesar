@@ -30,7 +30,7 @@ class Cesar {
         }
     }
 
-    isUpper(letter){
+    isUpper(letter) {//Check if letter is upper or lower
         if (letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90) {
             return true;
         } else {
@@ -38,7 +38,7 @@ class Cesar {
         }
     }
 
-    encripting(alphabet, len, letter, rot = 13) {
+    encripting(alphabet, len, letter, rot = 13) { //logic responsible for encryption, based on rot
         const letterIndex = alphabet.indexOf(letter)
         if (alphabet[letterIndex + rot] === undefined) {
             const howMuchToEndAlphabet = len - letterIndex - 1
@@ -56,7 +56,7 @@ class Cesar {
         }
     }
 
-    validChars(input) {
+    validChars(input) {//Check if string contains only letters
         const reg = /[^a-zA-Z]/;
         return !reg.test(input)
     }
