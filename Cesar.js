@@ -1,3 +1,10 @@
+class Cesar {
+    constructor(input, rot) {
+        this.input = input;
+        this.rot = rot;
+    }
+}
+
 function cesar(input, rot) {
     if (validChars(input)) {
         if (Number.isInteger(rot)) {
