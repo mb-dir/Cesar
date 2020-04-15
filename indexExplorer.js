@@ -8,6 +8,9 @@ window.addEventListener('DOMContentLoaded', function(){
         const rot = parseInt(document.querySelector('#rot').value);
         const cesarData = document.querySelector('#cesar').value;
         
-        console.log("Rot wynosi: " + rot +", a tekst to " + cesarData)
+        const cesar = new Cesar(cesarData, rot)
+
+        afterEncrypted.innerHTML = '';
+        afterEncrypted.innerHTML = cesar.getCesar();
     });
 });
