@@ -61,3 +61,5 @@ class Cesar {
         return !reg.test(input)
     }
 }
+
+export default Cesar;

@@ -1,3 +1,5 @@
+import Cesar from './Cesar.js'
+
 window.addEventListener('DOMContentLoaded', ()=>{
     const formData = document.querySelector('#inputData');
     let afterEncrypted = document.querySelector('#afterCesar');
