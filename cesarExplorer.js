@@ -10,8 +10,10 @@ Cesar.prototype.getCesar = function(){
             const alphabetLen = 26; //const length of alphabet is 26
 
             let encryptedWord = '';
+            
+            for(let i = 0; i < this.input.length; i++){
+                const letter = this.input[i];
 
-            for (const letter of this.input) {
                 if (this.isUpper(letter)) {
                     encryptedWord += this.encripting(alphabetUpper, alphabetLen, letter, this.rot)
                 } else {
@@ -34,7 +36,7 @@ Cesar.prototype.isUpper = function(letter){
         return false;
     }
 }
-Cesar.prototype.encripting = function(alphabet, len, letter, rot = 13){
+Cesar.prototype.encripting = function(alphabet, len, letter, rot){
     const letterIndex = alphabet.indexOf(letter)
     if (alphabet[letterIndex + rot] === undefined) {
         const howMuchToEndAlphabet = len - letterIndex - 1
@@ -55,3 +57,11 @@ Cesar.prototype.validChars = function(input){
     const reg = /[^a-zA-Z]/;
     return !reg.test(input)
 }
+
+
+//Polifils
+Number.isInteger = Number.isInteger || function (value) {
+    return typeof value === "number" &&
+        isFinite(value) &&
+        Math.floor(value) === value;
+};
