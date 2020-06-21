@@ -34,6 +34,8 @@ label{
     display: block;
 }
 button{
+    position: relative;
+    overflow: hidden;
     background-color: #111;
     color: #efefef;
     padding: 3px 7px;
@@ -43,5 +45,21 @@ button{
 }
 button:hover{
     cursor: pointer;
+}
+button::after{
+    content: 'Szyfruj!';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #fb7373;
+    color: #111;
+    border: 2px solid #111;
+    transition: transform 1s 1s;
+}
+button:hover::after{
+    transform: translateX(-100%);
 }
 
