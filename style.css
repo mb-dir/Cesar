@@ -33,4 +33,15 @@ body{
 label{
     display: block;
 }
+button{
+    background-color: #111;
+    color: #efefef;
+    padding: 3px 7px;
+    border: none;
+    border: 2px solid #fb7373;
+    border-radius: 2px;
+}
+button:hover{
+    cursor: pointer;
+}
 
