@@ -9,11 +9,13 @@ body{
     padding: 0;
     font-family: sans-serif;
     text-align: center;
+    background-color: #111;
+    color: #efefef;
 }
 .wrapper {
     width: 60%;
-    margin: 0 auto;
-    border: 3px solid #273c75;
+    margin: 50px auto;
+    border: 3px solid #fb7373;
     border-radius: 5px;
 }
 .form{
@@ -30,5 +32,34 @@ body{
 }
 label{
     display: block;
+}
+button{
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+    color: #efefef;
+    padding: 3px 7px;
+    border: none;
+    border: 2px solid #fb7373;
+    border-radius: 2px;
+}
+button:hover{
+    cursor: pointer;
+}
+button::after{
+    content: 'Szyfruj!';
+    position: absolute;
+    top: 0;
+    right: -100%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #fb7373;
+    color: #111;
+    border: 2px solid #111;
+    transition: transform 1s 1s;
+}
+button:hover::after{
+    transform: translateX(-100%);
 }
 
